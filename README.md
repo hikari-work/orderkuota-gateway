@@ -684,6 +684,7 @@ If a `callback_url` is configured, the system will automatically send a `POST` r
   "created_at": "YYYY-MM-DDTHH:MM:SS.ssssss",
   "expired_at": 1754763948300
 }
+```
 
 Credits : 
 - Telegram @viandrabs
