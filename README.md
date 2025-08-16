@@ -139,7 +139,7 @@ Mengambil data detail mengenai seorang pengguna.
           "email": "user@example.com",
           "token": "a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8",
           "qrcode": "data:image/png;base64,iVBO....5CYII=",
-          "callback_url": "[https://anda.com/webhook](https://anda.com/webhook)",
+          "callback_url": "https://anda.com/webhook",
           "qris_string": "000201010...6304A0D7"
         }
         ```
@@ -178,7 +178,7 @@ Memperbarui data pengguna, seperti alamat surel dan URL panggilan balik.
           "data": {
             "username": "contoh_user",
             "email": "user_baru@example.com",
-            "callback_url": "[https://anda.com/webhook_baru](https://anda.com/webhook_baru)"
+            "callback_url": "https://anda.com/webhook_baru"
           }
         }
         ```
@@ -303,6 +303,12 @@ Menghasilkan gambar QRIS dari sebuah faktur yang dapat dipindai.
     -   `width`: `integer` (Opsional, nilai default: `1080`)
 -   **Responses:**
     -   **Respon Sukses (200 OK)**: *Response body* akan berisi data biner dari gambar berformat PNG.
+-   **Contoh cURL:**
+    ```bash
+    curl -X GET "https://gateway.rerechanstore.eu.org/api/v2/invoices/qris/c16f9d3c-c740-480e-90c4-41ccef101c53?height=1080&width=1080" \
+    -H "Authorization: Bearer e2d307c5-ea01-484a-9bdd-face8d816088" \
+    --output qris.png
+    ```
 
 ---
 
@@ -477,7 +483,7 @@ Retrieves detailed data pertaining to a user.
           "email": "user@example.com",
           "token": "a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8",
           "qrcode": "data:image/png;base64,iVBO....5CYII=",
-          "callback_url": "[https://yourdomain.com/webhook](https://yourdomain.com/webhook)",
+          "callback_url": "https://yourdomain.com/webhook",
           "qris_string": "000201010...6304A0D7"
         }
         ```
@@ -516,7 +522,7 @@ Updates user data, such as email address and callback URL.
           "data": {
             "username": "example_user",
             "email": "new_user@example.com",
-            "callback_url": "[https://yourdomain.com/new_webhook](https://yourdomain.com/new_webhook)"
+            "callback_url": "https://yourdomain.com/new_webhook"
           }
         }
         ```
@@ -641,6 +647,12 @@ Generates a scannable QRIS image from an invoice.
     -   `width`: `integer` (Optional, default value: `1080`)
 -   **Responses:**
     -   **Success Response (200 OK)**: The response body will contain the binary data of the PNG-formatted image.
+-   **cURL Example:**
+    ```bash
+    curl -X GET "https://gateway.rerechanstore.eu.org/api/v2/invoices/qris/c16f9d3c-c740-480e-90c4-41ccef101c53?height=1080&width=1080" \
+    -H "Authorization: Bearer e2d307c5-ea01-484a-9bdd-face8d816088" \
+    --output qris.png
+    ```
 
 ---
 
